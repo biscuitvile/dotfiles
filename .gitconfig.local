@@ -1,0 +1,10 @@
+[user]
+  name = Andy Borsz
+  email = andy.borsz@gmail.com
+[core]
+  editor = vim
+[heroku]
+  account = ab
+[diff]
+[color]
+    ui = auto
