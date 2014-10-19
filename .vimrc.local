@@ -1,0 +1,28 @@
+runtime macros/matchit.vim
+
+set number
+
+syntax enable
+set background=dark
+colorscheme solarized
+
+let g:turbux_command_prefix = 'time bundle exec'
+
+" Refresh CtrlP cache all the time
+nnoremap <silent> <leader>f :ClearCtrlPCache<cr>\|:CtrlP<cr>
+
+" Set and unset cursorline
+autocmd BufEnter * set cursorline
+autocmd BufLeave * set nocursorline
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e ~/.vimrc.local<CR>
+nmap <silent> <leader>sv :so ~/.vimrc<CR>
+
+" Scroll viewport faster
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+function! KillWhitespace()
+  :silent %s/\t/  /g | %s/\s\+$//e
+endfunction

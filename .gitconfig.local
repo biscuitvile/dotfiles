@@ -1,10 +1,7 @@
+[github]
+	user = biscuitvile
 [user]
-  name = Andy Borsz
-  email = andy.borsz@gmail.com
-[core]
-  editor = vim
-[heroku]
-  account = ab
-[diff]
-[color]
-    ui = auto
+	email = andy.borsz@gmail.com
+	name = "Andy Borsz"
+[init]
+	templatedir = ~/.git_template

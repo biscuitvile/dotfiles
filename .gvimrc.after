@@ -1,6 +1,0 @@
-" disable GUI tabs
-" set showtabline=0
-
-" Don't show scroll bars in the GUI
-set guioptions-=L
-set guioptions-=r
