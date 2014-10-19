@@ -1,4 +1,4 @@
-# dotfiles
+# DERT FERLERS
 
 This is a small set of customizations that sit on top of Hashrocket's dotmatrix project which I have used for years and highly recommend.
 
