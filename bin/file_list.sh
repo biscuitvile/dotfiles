@@ -1,10 +1,4 @@
 #!/usr/bin/env bash
 set -e
 
-files=".gitconfig.local
-.tmux.conf.local
-.vimbundle.local
-.vimrc.local
-.zshrc.local"
-
-echo $files
+find . -type f -name ".*" | xargs -n 1 basename
