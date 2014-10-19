@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-files=".gitconfig.local
-.tmux.conf.local
-.vimbundle.local
-.vimrc.local
-.zshrc.local"
-
-for dotfile in $files; do
+for dotfile in $(./bin/file_list.sh); do
   echo "Linking $dotfile"
   path="$HOME/$dotfile"
   ln -nfs $PWD/$dotfile $path

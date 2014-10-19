@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -e
+
+for dotfile in $(./bin/file_list.sh); do
+  echo "Removing $dotfile"
+  path="$HOME/$dotfile"
+  rm $path
+done
+
+echo -e "\nDone!"

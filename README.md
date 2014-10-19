@@ -4,10 +4,18 @@ This is a small set of customizations that sit on top of Hashrocket's dotmatrix 
 
 https://github.com/hashrocket/dotmatrix
 
-## Usage
+## Install
 
 To install clone the repo and run the install script from within the dotfiles directory:
 
 ```
 git clone git@github.com:biscuitvile/dotfiles.git && cd dotfiles && bin/install
+```
+
+## Uninstall
+
+To uninstall run the uninstall script from within the dotfiles directory:
+
+```
+bin/uninstall
 ```
