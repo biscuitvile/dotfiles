@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 set -e
 
-find . -type f -name ".*" | xargs -n 1 basename
+find . -name '.git' -prune -o -name ".*" -print | \
+  xargs -n 1 basename | tail -n +2
