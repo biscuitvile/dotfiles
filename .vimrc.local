@@ -8,6 +8,9 @@ colorscheme railscasts
 
 let g:turbux_command_prefix = 'time bundle exec'
 
+" Highlight long lines
+match ErrorMsg '\%>83v.\+'
+
 " Refresh CtrlP cache all the time
 nnoremap <silent> <leader>f :ClearCtrlPCache<cr>\|:CtrlP<cr>
 
