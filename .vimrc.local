@@ -11,6 +11,9 @@ let g:turbux_command_prefix = 'time bundle exec'
 " Refresh CtrlP cache all the time
 nnoremap <silent> <leader>f :ClearCtrlPCache<cr>\|:CtrlP<cr>
 
+" Stop CtrlP from looking in useless directories
+set wildignore+=*/.git/*,*/vendor,*/node_modules,*/bower_components,*/tmp
+
 " Set and unset cursorline
 autocmd BufEnter * set cursorline
 autocmd BufLeave * set nocursorline
