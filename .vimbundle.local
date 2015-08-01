@@ -4,4 +4,6 @@ nelstrom/vim-textobj-rubyblock
 kien/ctrlp.vim
 mattn/webapi-vim
 mattn/gist-vim
-biscuitvile/vim-turbux
+mustache/vim-mustache-handlebars
+tpope/vim-jdaddy
+biscuitvile/vim-ember-cli-test
