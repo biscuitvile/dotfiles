@@ -22,6 +22,24 @@ autocmd BufLeave * set nocursorline
 nmap <silent> <leader>ev :e ~/.vimrc.local<CR>
 nmap <silent> <leader>sv :so ~/.vimrc<CR>
 
+" RSpec Expect To
+imap <leader>et expect().to<ESC>F(a
+
+" RSpec Expect To Equal
+imap <leader>ete expect().to eql<ESC>F(a
+
+" RSpec Expect To Include
+imap <leader>eti expect().to include<ESC>F(a
+
+" RSpec Expect To Be
+imap <leader>etb expect().to be_<ESC>F(a
+
+" Convert minitest stub to RSpec allow
+nmap <leader>sta V:s/stub/allow/g<CR>0f)llito receive(:<ESC>/ <CR>i)<ESC>
+
+" Convert minitest mock to RSpec expect
+nmap <leader>mte V:s/mock/expect/g<CR>0f)llito receive(:<ESC>/ <CR>i)<ESC>
+
 " Scroll viewport faster
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
