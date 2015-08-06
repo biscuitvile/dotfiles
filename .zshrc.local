@@ -4,6 +4,9 @@ eval "$(/Users/andy/hashrocket/hr/bin/hr init -)"
 export NVM_DIR="/Users/andy/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# load autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 alias cdc="cd ~/code"
 alias gld="git log --oneline --decorate --no-merges"
 alias cheddar="git commit --amend -CHEAD"
