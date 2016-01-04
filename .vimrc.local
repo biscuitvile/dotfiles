@@ -2,6 +2,8 @@ runtime macros/matchit.vim
 
 set number
 
+iabbr rpry require 'pry-remote'; binding.remote_pry;
+
 syntax enable
 set background=dark
 colorscheme railscasts
