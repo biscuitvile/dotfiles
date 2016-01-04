@@ -12,3 +12,5 @@ alias gld="git log --oneline --decorate --no-merges"
 alias cheddar="git commit --amend -CHEAD"
 alias qunit="open 'http://localhost:7357'"
 alias git-cleanup-features="git branch | grep -v 'master' | grep -v 'develop' | xargs git branch -D"
+
+export KNIFE_HOME=~/.chef
