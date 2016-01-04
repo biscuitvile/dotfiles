@@ -8,7 +8,8 @@ syntax enable
 set background=dark
 colorscheme railscasts
 
-let g:turbux_command_prefix = 'time bundle exec'
+autocmd BufEnter *.rb let g:turbux_command_rspec = 'bundle exec rspec'
+autocmd BufEnter */bigcartel/bigcartel*.rb let g:turbux_command_rspec = 'bundle exec spec'
 
 " Highlight long lines
 match ErrorMsg '\%>83v.\+'
