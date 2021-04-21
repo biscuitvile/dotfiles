@@ -2,8 +2,6 @@ runtime macros/matchit.vim
 
 set number
 
-iabbr rpry require 'pry-remote'; binding.remote_pry;
-
 syntax enable
 set background=dark
 colorscheme railscasts
@@ -62,3 +60,7 @@ nnoremap <C-y> 3<C-y>
 function! KillWhitespace()
   :silent %s/\t/  /g | %s/\s\+$//e
 endfunction
+
+" open ctag in tab/vertical split
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <leader><C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
