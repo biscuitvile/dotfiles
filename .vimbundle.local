@@ -1,9 +1,8 @@
-altercation/vim-colors-solarized
-kana/vim-textobj-user
-nelstrom/vim-textobj-rubyblock
-kien/ctrlp.vim
-mattn/webapi-vim
-mattn/gist-vim
-mustache/vim-mustache-handlebars
-tpope/vim-jdaddy
-biscuitvile/vim-ember-cli-test
+Plug 'altercation/vim-colors-solarized'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'kien/ctrlp.vim'
+Plug 'mattn/webapi-vim'
+Plug 'mattn/gist-vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'tpope/vim-jdaddy'
