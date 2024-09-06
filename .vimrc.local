@@ -2,15 +2,30 @@ runtime macros/matchit.vim
 
 set number
 
+" Disable ALEFix on save
+let g:ale_fix_on_save = 0
+
+if !exists("g:vim_ai_chat")
+  let g:vim_ai_chat = {
+  \  "options": {
+  \    "model": "gpt-4",
+  \  }
+  \}
+endif
+
 syntax enable
-set background=dark
-colorscheme railscasts
+set background=light
+colorscheme solarized
+let g:solarized_termcolors=256
 
-autocmd BufEnter *.rb let g:turbux_command_rspec = 'bundle exec rspec'
-autocmd BufEnter */bigcartel/bigcartel*.rb let g:turbux_command_rspec = 'bundle exec spec'
+" Ggrep for word under cursor
+nnoremap <leader>g :execute 'silent! Ggrep ' . expand('<cword>')<CR>
 
-" Highlight long lines
-match ErrorMsg '\%>83v.\+'
+" trigger chat
+xnoremap <leader>c :AIChat<CR>
+nnoremap <leader>c :AIChat<CR>
+nnoremap <leader>C :vnew<CR>:AIChat<CR>:wincmd k<CR>:q<CR>
+xnoremap <leader>C :vnew<CR>:AIChat<CR>:wincmd k<CR>:q<CR>
 
 " Re-write sessions automatically on save
 autocmd BufWrite * call RewriteSession()
@@ -35,32 +50,10 @@ autocmd BufLeave * set nocursorline
 nmap <silent> <leader>ev :e ~/.vimrc.local<CR>
 nmap <silent> <leader>sv :so ~/.vimrc<CR>
 
-" RSpec Expect To
-imap <leader>et expect().to<ESC>F(a
+nmap <silent> <leader>a :ALEToggle<CR>
 
-" RSpec Expect To Equal
-imap <leader>ete expect().to eql<ESC>F(a
-
-" RSpec Expect To Include
-imap <leader>eti expect().to include<ESC>F(a
-
-" RSpec Expect To Be
-imap <leader>etb expect().to be_<ESC>F(a
-
-" Convert minitest stub to RSpec allow
-nmap <leader>sta V:s/stub/allow/g<CR>0f)llito receive(:<ESC>/ <CR>i)<ESC>
-
-" Convert minitest mock to RSpec expect
-nmap <leader>mte V:s/mock/expect/g<CR>0f)llito receive(:<ESC>/ <CR>i)<ESC>
-
-" Scroll viewport faster
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
+iabbrev rpry binding.remote_pry
 
 function! KillWhitespace()
   :silent %s/\t/  /g | %s/\s\+$//e
 endfunction
-
-" open ctag in tab/vertical split
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <leader><C-\> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>

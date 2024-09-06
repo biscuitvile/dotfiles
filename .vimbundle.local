@@ -1,8 +1,12 @@
 Plug 'altercation/vim-colors-solarized'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'github/copilot.vim', { 'branch': 'release' }
 Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'kien/ctrlp.vim'
-Plug 'mattn/webapi-vim'
+Plug 'madox2/vim-ai', { 'branch': 'main' }
 Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'tpope/vim-jdaddy'
+Plug 'tpope/vim-rhubarb'

@@ -6,3 +6,10 @@ bind -r H resize-pane -L 5
 bind -r J resize-pane -D 5
 bind -r K resize-pane -U 5
 bind -r L resize-pane -R 5
+
+# Search for previous error
+bind e copy-mode \; send -X search-backward "Error"
+
+set -g pane-active-border-style fg=colour208,bg=default
+
+bind t select-pane -t 0 \; resize-pane -Z
