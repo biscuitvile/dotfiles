@@ -1,16 +1,32 @@
-eval "$(rbenv init -)"
-eval "$(/Users/andy/hashrocket/hr/bin/hr init -)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export NVM_DIR="/Users/andy/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# pnpm
+export PNPM_HOME="/Users/andy/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
-# load autojump
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+. "$HOME/.asdf/asdf.sh"
+
+export PATH=$PATH:/usr/local/mysql/bin
+
+eval "$(/Users/andy/code/dotmatrix/hr/bin/hr init -)"
+
+export BAYMARD_INITIALS="AD"
+export NGROK_SUBDOMAIN="doglogic"
 
 alias cdc="cd ~/code"
 alias gld="git log --oneline --decorate --no-merges"
 alias cheddar="git commit --amend -CHEAD"
-alias qunit="open 'http://localhost:7357'"
 alias git-cleanup-features="git branch | grep -v 'master' | grep -v 'develop' | xargs git branch -D"
 
-export KNIFE_HOME=~/.chef
+vim-last-commit() {
+    vim -p $(git diff --name-only HEAD^ HEAD)
+}
+
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
