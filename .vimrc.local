@@ -2,6 +2,9 @@ runtime macros/matchit.vim
 
 set number
 
+" Prefer toggle ALEFix manually
+let g:ale_enabled=0
+
 " Disable ALEFix on save
 let g:ale_fix_on_save = 0
 
